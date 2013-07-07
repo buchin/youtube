@@ -9,7 +9,11 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "illuminate/support": "4.0.x"
+        "illuminate/support": "4.0.x",
+        "kriswallsmith/buzz": "dev-master"
+    },
+    "require-dev": {
+        "mockery/mockery": "*"
     },
     "autoload": {
         "psr-0": {
