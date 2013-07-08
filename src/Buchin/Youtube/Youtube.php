@@ -20,7 +20,7 @@ class Youtube {
 
 		$response = $this->browser->get($url);
 
-		$response = json_decode($response, true);
+		$response = json_decode($response->getContent(), true);
 		
 		$meta = array();
 		$meta['max_results'] = $response['feed']['openSearch$itemsPerPage']['$t'];
