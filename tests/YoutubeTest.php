@@ -28,6 +28,7 @@ EOD;
     	$this->browser->shouldReceive('get')
     	->once()
     	->andReturn($this->response);
+
     	$youtube = new Youtube($this->browser);
 
     	$response = $youtube->search('Minecraft Music');
@@ -45,7 +46,7 @@ EOD;
     	$youtube = new Youtube($this->browser);
     	$video = $youtube->format($raw_video);
 
-    	$this->assertArrayHasKey('id', $video, 'Video did not has Youtube ID');
+    	$this->assertArrayHasKey('youtube_id', $video, 'Video did not has Youtube ID');
     	$this->assertArrayHasKey('title', $video, 'Video should have a title');
     	$this->assertArrayHasKey('excerpt', $video);
     	$this->assertArrayHasKey('views', $video);
