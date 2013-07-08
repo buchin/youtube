@@ -10,7 +10,7 @@ class Youtube {
 		$this->browser = $browser;
 	}
 
-	public function search($term = '', $max_results = 25, $start_index = 0)
+	public function search($term = '', $max_results = 25, $start_index = 1)
 	{
 		$videos = array();
 		$term = urlencode($term);
