@@ -46,7 +46,7 @@ EOD;
     	$youtube = new Youtube($this->browser);
     	$video = $youtube->format($raw_video);
 
-    	$this->assertArrayHasKey('youtube_id', $video, 'Video did not has Youtube ID');
+    	$this->assertArrayHasKey('youtubeid', $video, 'Video did not has Youtube ID');
     	$this->assertArrayHasKey('title', $video, 'Video should have a title');
     	$this->assertArrayHasKey('excerpt', $video);
     	$this->assertArrayHasKey('views', $video);

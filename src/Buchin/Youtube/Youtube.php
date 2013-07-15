@@ -42,7 +42,7 @@ class Youtube {
 	public function format($raw)
 	{
 		$video = array();
-		$video['youtube_id'] = $raw['media$group']['yt$videoid']['$t'];
+		$video['youtubeid'] = $raw['media$group']['yt$videoid']['$t'];
 		$video['author'] = $raw['author'][0]['name']['$t'];
 		$video['title'] = $raw['title']['$t'];
 		$video['excerpt'] = $raw['media$group']['media$description']['$t'];
